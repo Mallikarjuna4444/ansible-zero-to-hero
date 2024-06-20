@@ -5,4 +5,5 @@
 5. handlers
 6. ignore_errors
 7. tags
+8. group_vars and host_vars
 
