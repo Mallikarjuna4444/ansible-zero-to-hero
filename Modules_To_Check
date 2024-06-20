@@ -1,4 +1,8 @@
 1. Debug Module
 2. Register keyword for storing variables
 3. Command vs Shell module
+4. include_tasks
+5. handlers
+6. ignore_errors
+7. tags
 
