@@ -6,4 +6,9 @@
 6. ignore_errors
 7. tags
 8. group_vars and host_vars
+9. lookup feature
+10. plugins
+11. Connectivity to Linux and windows machines
+12. with_items or loop keyword
+13. Synchronize module
 
