@@ -12,3 +12,17 @@
 12. with_items or loop keyword
 13. Synchronize module
 
+Ansible does not work with Windows XP or Server 2003 hosts. Ansible does work with these Windows operating system versions:
+
+Windows Server 2016
+Windows Server 2019
+Windows Server 2022
+Windows 10
+Windows 11
+Support for Windows Server 2008, 2008 R2, and Windows 7 ended in the 2.10 release. Support for Windows Server 2012, 2012 R2, Windows 8, and 8.1 ended in the 2.16 release.
+
+Connecting to a Windows Host - https://www.ansible.com/blog/connecting-to-a-windows-host/
+
+Setting up Windows Host - https://docs.ansible.com/ansible/latest/os_guide/windows_setup.html#windows-setup
+
+
