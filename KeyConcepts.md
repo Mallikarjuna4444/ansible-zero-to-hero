@@ -1,3 +1,5 @@
+**Things to Check:**
+
 1. Debug Module
 2. Register keyword for storing variables
 3. Command vs Shell module
@@ -12,6 +14,8 @@
 12. with_items or loop keyword
 13. Synchronize module
 
+**Windows Supported Versions:**
+
 Ansible does not work with Windows XP or Server 2003 hosts. Ansible does work with these Windows operating system versions:
 
 Windows Server 2016
@@ -23,6 +27,11 @@ Support for Windows Server 2008, 2008 R2, and Windows 7 ended in the 2.10 releas
 
 Connecting to a Windows Host - https://www.ansible.com/blog/connecting-to-a-windows-host/
 
+**Setup that is required before Ansible can communicate with a Microsoft Windows host**
+
 Setting up Windows Host - https://docs.ansible.com/ansible/latest/os_guide/windows_setup.html#windows-setup
+
+
+
 
 
