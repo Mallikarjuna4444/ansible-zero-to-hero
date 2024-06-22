@@ -31,7 +31,7 @@ Connecting to a Windows Host - https://www.ansible.com/blog/connecting-to-a-wind
 
 Setting up Windows Host - https://docs.ansible.com/ansible/latest/os_guide/windows_setup.html#windows-setup
 
-**Ansible Windows Usage: **
+**Ansible Windows Usage:**
 
 https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html
 
