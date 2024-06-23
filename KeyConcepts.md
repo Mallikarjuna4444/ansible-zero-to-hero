@@ -39,6 +39,10 @@ https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html
 
 https://spacelift.io/blog/ansible-loops
 
+**Ansible Built-In Modules:**
+
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html
+
 
 
 
