@@ -43,6 +43,27 @@ https://spacelift.io/blog/ansible-loops
 
 https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html
 
+**Shell Module:**
+
+https://spacelift.io/blog/ansible-shell-module
+
+**Variables:**
+
+https://spacelift.io/blog/ansible-variables
+
+**Modules:**
+
+https://spacelift.io/blog/ansible-modules
+
+**Roles:**
+
+https://spacelift.io/blog/ansible-roles
+
+**Ansible Best Practices:**
+
+https://spacelift.io/blog/ansible-best-practices
+
+
 
 
 
