@@ -4,15 +4,16 @@
 2. Register keyword for storing variables
 3. Command vs Shell module
 4. include_tasks
-5. handlers
-6. ignore_errors
-7. tags
-8. group_vars and host_vars
-9. lookup feature
-10. plugins
-11. Connectivity to Linux and windows machines
-12. with_items or loop keyword
-13. Synchronize module
+5. include_roles
+6. handlers
+7. ignore_errors
+8. tags
+9. group_vars and host_vars
+10. lookup feature
+11. plugins
+12. Connectivity to Linux and windows machines
+13. with_items or loop keyword
+14. Synchronize module
 
 **Windows Supported Versions:**
 
@@ -62,6 +63,10 @@ https://spacelift.io/blog/ansible-roles
 **Ansible Best Practices:**
 
 https://spacelift.io/blog/ansible-best-practices
+
+**TAGS:**
+
+https://medium.com/@sobha366/tags-in-ansible-9621eb18c91a
 
 
 
