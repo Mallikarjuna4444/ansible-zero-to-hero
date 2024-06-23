@@ -35,6 +35,10 @@ Setting up Windows Host - https://docs.ansible.com/ansible/latest/os_guide/windo
 
 https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html
 
+**Ansible Loops:**
+
+https://spacelift.io/blog/ansible-loops
+
 
 
 
