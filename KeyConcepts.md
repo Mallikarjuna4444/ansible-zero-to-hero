@@ -14,6 +14,7 @@
 12. Connectivity to Linux and windows machines
 13. with_items or loop keyword
 14. Synchronize module
+15. Passwordless Authentication to managed nodes
 
 **Windows Supported Versions:**
 
