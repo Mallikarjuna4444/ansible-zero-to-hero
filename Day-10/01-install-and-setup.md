@@ -1,4 +1,4 @@
-# Setup EC2 Collection and Authentication
+# Install and Setup Ansible for Implementing Policy as Code on AWS
 
 ## Install boto3
 
@@ -25,8 +25,3 @@ openssl rand -base64 2048 > vault.pass
 ```
 ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass
 ```
-
-
-
-
-
