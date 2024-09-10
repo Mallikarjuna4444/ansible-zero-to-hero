@@ -6,9 +6,9 @@
 4. nproc --> prints no of CPU cores used by Linux machine
 5. df -h   --> prints free disc space present in the system
 6. free    --> prints info regarding free memory and swap memory
-7. ps -ef | grep --> Gives details info rgearding all the processes running
+7. ps -ef  --> Gives details info regarding all the processes running
 8. awk  --> used to get particular output 
-9. find
+9. find  --> finds the path of a file
 10. if loops and for loops
 11. set -x set -e set -o
 12. curl
