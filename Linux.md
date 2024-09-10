@@ -14,7 +14,7 @@
 12. curl
 13. wget
 14. curl vs wget
-15 man --> command to get help on any command
+15. man --> command to get help on any command
 16. symlinks vs hardlinks
 17. default permissions of a file when it is created - 666 - rw-rw-rw-
 18. head 
