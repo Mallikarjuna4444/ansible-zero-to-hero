@@ -1206,7 +1206,129 @@ tar -xzvf archive.tar.gz
 These commands are fundamental for managing file archives and compression in Unix-like systems, often used together for efficient storage and transmission of files.
 
 ------------------------------------------------------------------------------------------------------------------------------------
+### Networking commands
 
+In Linux, daily networking tasks often involve checking network status, configuring interfaces, troubleshooting connectivity, and monitoring network activity. Here’s a comprehensive list of commonly used networking commands that you might use on a daily basis:
+
+### **1. Basic Network Configuration**
+
+- **`ifconfig`**: Displays or configures network interfaces (deprecated, replaced by `ip`).
+  ```bash
+  ifconfig
+  ```
+
+- **`ip`**: Provides detailed network configuration and control.
+  ```bash
+  ip addr show        # Display network interfaces and their IP addresses
+  ip link show        # Show network interfaces
+  ip route show       # Display routing table
+  ip a               # Short form for `ip addr show`
+  ip l               # Short form for `ip link show`
+  ip r               # Short form for `ip route show`
+  ```
+
+- **`nmcli`**: Command-line tool for NetworkManager to manage network connections.
+  ```bash
+  nmcli device status         # Show status of network devices
+  nmcli connection show       # List network connections
+  nmcli device show           # Show detailed information about network devices
+  nmcli networking off        # Turn off networking
+  nmcli networking on         # Turn on networking
+  ```
+
+### **2. Network Status and Connectivity**
+
+- **`ping`**: Sends ICMP ECHO_REQUEST packets to a network host.
+  ```bash
+  ping example.com         # Ping a domain name
+  ping 192.168.1.1         # Ping an IP address
+  ping -c 4 example.com    # Ping with a count of 4 packets
+  ```
+
+- **`traceroute`**: Traces the route packets take to a network host.
+  ```bash
+  traceroute example.com   # Trace the route to a domain
+  traceroute 8.8.8.8       # Trace the route to an IP address
+  ```
+
+- **`tracepath`**: Traces the path to a network host, similar to `traceroute`.
+  ```bash
+  tracepath example.com
+  ```
+
+- **`mtr`**: Combines `ping` and `traceroute` for real-time network diagnostics.
+  ```bash
+  mtr example.com
+  ```
+
+### **3. Network Interfaces**
+
+- **`netstat`**: Displays network connections, routing tables, and interface statistics (deprecated, replaced by `ss`).
+  ```bash
+  netstat -tuln          # Show listening ports and associated addresses
+  netstat -rn            # Show routing table
+  netstat -i             # Show network interfaces and statistics
+  ```
+
+- **`ss`**: Utility to investigate sockets (modern replacement for `netstat`).
+  ```bash
+  ss -tuln               # Show listening TCP and UDP ports
+  ss -tul                # Show listening TCP and UDP ports with additional details
+  ss -r                  # Show routing information
+  ```
+
+### **5. DNS and Host Resolution**
+
+- **`nslookup`**: Queries DNS to obtain domain name or IP address information.
+  ```bash
+  nslookup example.com   # Lookup the IP address for a domain
+  ```
+
+- **`dig`**: Provides detailed DNS query information.
+  ```bash
+  dig example.com        # Query DNS for a domain
+  dig -x 8.8.8.8         # Reverse DNS lookup for an IP address
+  ```
+
+- **`host`**: Simple utility to perform DNS lookups.
+  ```bash
+  host example.com       # Lookup the IP address for a domain
+  host 8.8.8.8           # Reverse lookup for an IP address
+  ```
+
+### **7. Network Services**
+
+- **`systemctl`**: Manages system services, including network services.
+  ```bash
+  systemctl status NetworkManager      # Check the status of NetworkManager
+  systemctl restart NetworkManager     # Restart NetworkManager
+  systemctl enable NetworkManager      # Enable NetworkManager to start at boot
+  ```
+
+- **`service`**: Older command for managing services.
+  ```bash
+  service network status     # Check the status of the network service
+  service network restart    # Restart the network service
+  ```
+
+### **9. Network File Transfer**
+
+- **`scp`**: Securely copy files between hosts over SSH.
+  ```bash
+  scp file.txt user@remote:/path/to/destination  # Copy file to remote host
+  scp user@remote:/path/to/file.txt .             # Copy file from remote host
+  ```
+
+- **`rsync`**: Synchronizes files and directories between locations.
+  ```bash
+  rsync -avz source/ user@remote:/path/to/destination  # Sync files to remote host
+  ```
+
+### **Summary**
+
+These commands are vital for various aspects of network management, including configuration, monitoring, and troubleshooting. Familiarity with these commands can help you effectively manage network interfaces, diagnose connectivity issues, and monitor network performance.
+
+----------------------------------------------------------------------------------------------------------
 Here's the corrected version of your script to count occurrences of 's' in the string 'mississippi':
 
 bash
