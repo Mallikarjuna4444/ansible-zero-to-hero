@@ -1,3 +1,7 @@
+### SHell Scripting
+
+https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/
+
 **Linux Commands to check**
 
 1. chmod --> Used to change the permissions for the file/directory
@@ -1329,6 +1333,70 @@ In Linux, daily networking tasks often involve checking network status, configur
 These commands are vital for various aspects of network management, including configuration, monitoring, and troubleshooting. Familiarity with these commands can help you effectively manage network interfaces, diagnose connectivity issues, and monitor network performance.
 
 ----------------------------------------------------------------------------------------------------------
+### sed
+
+`sed` is a powerful stream editor used in Unix and Unix-like operating systems for parsing and transforming text data. Its primary use is for basic text transformations on an input stream (a file or input from a pipeline). Here are a few common usages:
+
+1. **Substitute Text:**
+   To replace occurrences of a string in a file, you can use:
+   ```bash
+   sed 's/old-text/new-text/g' filename
+   ```
+   - `s` stands for substitute.
+   - `old-text` is the text you want to replace.
+   - `new-text` is the text you want to replace it with.
+   - `g` is for global replacement, meaning all occurrences in each line.
+
+2. **Delete Lines:**
+   To delete specific lines, you can use:
+   ```bash
+   sed '3d' filename
+   ```
+   This deletes the third line of the file. You can also use a range, e.g., `1,3d` to delete lines 1 through 3.
+
+3. **Print Specific Lines:**
+   To print only certain lines from a file, use:
+   ```bash
+   sed -n '1,3p' filename
+   ```
+   - `-n` suppresses automatic printing.
+   - `1,3p` prints lines 1 through 3.
+
+4. **Insert Text:**
+   To insert text before a specific line:
+   ```bash
+   sed '2i\
+   New text to insert' filename
+   ```
+   This inserts "New text to insert" before the second line.
+
+5. **Append Text:**
+   To append text after a specific line:
+   ```bash
+   sed '2a\
+   Text to append' filename
+   ```
+   This appends "Text to append" after the second line.
+
+6. **Modify Multiple Lines:**
+   You can use `-e` to execute multiple commands:
+   ```bash
+   sed -e 's/old1/new1/g' -e 's/old2/new2/g' filename
+   ```
+   This applies both substitutions to the input.
+
+7. **In-Place Editing:**
+   To modify the file directly (in-place editing), use `-i`:
+   ```bash
+   sed -i 's/old-text/new-text/g' filename
+   ```
+   This changes the file directly without needing to redirect output to a new file.
+
+Feel free to ask if you need more details or examples!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Here's the corrected version of your script to count occurrences of 's' in the string 'mississippi':
 
 bash
