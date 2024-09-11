@@ -1,4 +1,4 @@
-### SHell Scripting
+### Shell Scripting
 
 https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/
 
