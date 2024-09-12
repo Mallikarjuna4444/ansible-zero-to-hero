@@ -12,3 +12,6 @@ https://www.geeksforgeeks.org/soft-hard-links-unixlinux/
 
 ### Redirection commands
 https://www.geeksforgeeks.org/input-output-redirection-in-linux/?ref=lbp
+
+### Functions
+https://www.geeksforgeeks.org/shell-scripting-functions-and-its-types/?ref=lbp
