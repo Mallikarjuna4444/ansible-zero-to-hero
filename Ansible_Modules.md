@@ -153,6 +153,7 @@ The `yum` module is used for managing packages on Red Hat-based systems (such as
 
 Both `apt` and `yum` modules are essential for managing packages and ensuring software is installed and maintained correctly on your systems. By using these modules, you can automate package management tasks across different Linux distributions effectively.
 
+---------------------------------------------------------------------------------------------------------------------------------------
 ### Copy Module
 The `copy` module in Ansible is used to copy files from the local machine (or from a remote source) to a specified location on the remote system. This module is versatile and allows you to manage file distribution as part of your configuration management or deployment tasks.
 
@@ -249,6 +250,7 @@ The `copy` module in Ansible is used to copy files from the local machine (or fr
 
 The `copy` module is a fundamental tool in Ansible for managing files, allowing you to automate the distribution and management of files across your infrastructure efficiently.
 
+---------------------------------------------------------------------------------------------------------------------------------------
 
 ### Template Module
 
@@ -368,6 +370,8 @@ setting2 = {{ setting2 }}
 
 The `template` module is a powerful feature in Ansible for managing configuration files dynamically and ensuring that they are tailored to the specific needs of each deployment or environment.
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
 ### Service Module
 In Ansible, the `service` module is used to manage services on remote systems. This module is essential for starting, stopping, restarting, reloading, and checking the status of services. It is cross-platform and can handle services on both Linux and Windows systems.
 
@@ -459,6 +463,8 @@ In Ansible, the `service` module is used to manage services on remote systems. T
 - On **Windows**, the `service` module interacts with the Windows Service Control Manager.
 
 The `service` module is quite flexible and covers a wide range of service management needs in Ansible playbooks.
+
+---------------------------------------------------------------------------------------------------------------------------------------
 
 ### File Module
 
@@ -660,6 +666,8 @@ The `lineinfile` module in Ansible is used to manage lines in text files. It's e
 
 The `lineinfile` module is a powerful tool for managing file contents in Ansible, particularly when you need to ensure specific configurations or modify lines in configuration files.
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
 ### blockinfile Module
 
 The `blockinfile` module in Ansible is used to manage a block of text within a file. Unlike `lineinfile`, which manages individual lines, `blockinfile` allows you to insert, update, or remove a block of text, which can be particularly useful for managing configuration files where you need to insert or modify a larger set of lines.
@@ -774,7 +782,7 @@ The `blockinfile` module in Ansible is used to manage a block of text within a f
 
 The `blockinfile` module is particularly useful when you need to manage multi-line configurations or comments in files, ensuring that blocks of text are consistently managed in a predictable manner.
 
-
+---------------------------------------------------------------------------------------------------------------------------------------
 ### Cron Module
 
 The `cron` module in Ansible is used to manage cron jobs on Unix-like systems. Cron jobs are scheduled tasks that are run at specified intervals. This module allows you to add, modify, or remove cron jobs, making it a powerful tool for managing scheduled tasks in a consistent and automated way.
@@ -879,6 +887,7 @@ The `cron` module in Ansible is used to manage cron jobs on Unix-like systems. C
 
 The `cron` module is a versatile tool for managing scheduled tasks across systems, allowing you to automate and control recurring jobs in a standardized way.
 
+---------------------------------------------------------------------------------------------------------------------------------------
 ### Shell vs Command Module
 
 In Ansible, the `shell` and `command` modules are used to execute commands on remote systems. While they may seem similar, they have distinct differences that affect how they execute commands and handle the environment.
