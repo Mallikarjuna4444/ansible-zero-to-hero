@@ -37,10 +37,6 @@ Setting up Windows Host - https://docs.ansible.com/ansible/latest/os_guide/windo
 
 https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html
 
-**Ansible Loops:**
-
-https://spacelift.io/blog/ansible-loops
-
 **Ansible Built-In Modules:**
 
 https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html
@@ -56,6 +52,10 @@ https://spacelift.io/blog/ansible-shell-module
 **Roles:**
 
 https://spacelift.io/blog/ansible-roles
+
+**Ansible Loops:**
+
+https://spacelift.io/blog/ansible-loops
 
 **Variables:**
 
