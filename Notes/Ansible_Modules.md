@@ -952,6 +952,65 @@ The `shell` module is used to execute commands through the shell, which allows f
    - **`command`**: More secure as it avoids the shell and potential shell injection vulnerabilities.
    - **`shell`**: Less secure due to the potential for shell injection attacks if not properly handled.
 
+Great question! Understanding **shell injection vulnerabilities** is crucial when using tools like Ansible, especially when deciding between `command` and `shell`.
+
+---
+
+## 🔐 What Are Shell Injection Vulnerabilities?
+
+**Shell injection** occurs when **untrusted input** (e.g. variables, user input, or external data) is **executed as part of a shell command**, leading to unintended and potentially **malicious commands being run** on the system.
+
+---
+
+### 💥 Example of Shell Injection
+
+Let's say you have a playbook that uses the `shell` module like this:
+
+```yaml
+- name: Dangerous shell example
+  shell: "ls {{ user_input }}"
+```
+
+If `user_input` is:
+
+```yaml
+user_input: "; rm -rf /"
+```
+
+Then the shell command becomes:
+
+```bash
+ls ; rm -rf /
+```
+
+**Result**: It lists the directory and then deletes everything on the system — catastrophic.
+
+---
+
+## ✅ Why `command` is Safer
+
+The `command` module does **not invoke a shell**, so it does **not interpret special characters** like `;`, `|`, `&&`, `>`, `$`, etc. This makes it **immune to shell injection**.
+
+### Example with `command`:
+
+```yaml
+- name: Safe command example
+  command: ls {{ user_input }}
+```
+
+Even if `user_input` is `; rm -rf /`, it will look for a file or directory named literally `; rm -rf /`, not execute it.
+
+---
+
+## 🔐 Best Practices
+
+* ✅ **Use `command`** whenever you don't need shell features.
+* 🚫 Avoid interpolating variables directly into `shell` commands without validation.
+* ✅ Use **quotes** and escape variables when absolutely using `shell`.
+* ✅ Sanitize or validate any user-generated input.
+
+---
+
 3. **Use Cases**:
    - **`command`**: Preferred for simple commands that do not require shell features. It is more secure and should be used when shell features are not needed.
    - **`shell`**: Required when you need to use shell features like pipes or redirects. It provides more flexibility but requires careful handling to avoid security issues.
