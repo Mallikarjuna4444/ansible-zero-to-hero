@@ -106,6 +106,58 @@ Group-specific variables are defined in `group_vars` files or directly in the in
 # group_vars/webservers.yml
 nginx_server_name: example.local
 ```
+Sure! Here's the **recommended directory structure** for organizing **host variables** and **group variables** in an Ansible project:
+
+```
+my-ansible-project/
+├── inventory/
+│   ├── hosts                  # Inventory file
+│   ├── group_vars/
+│   │   ├── all.yml            # Variables for all groups
+│   │   └── webservers.yml     # Variables specific to the 'webservers' group
+│   └── host_vars/
+│       ├── server1.yml        # Variables specific to 'server1'
+│       └── server2.yml        # Variables specific to 'server2'
+├── playbook.yml               # Main playbook
+```
+
+### Example: `inventory/hosts`
+
+```ini
+[webservers]
+server1 ansible_host=192.168.1.10
+server2 ansible_host=192.168.1.11
+```
+
+### Example: `inventory/group_vars/webservers.yml`
+
+```yaml
+http_port: 80
+max_clients: 200
+```
+
+### Example: `inventory/host_vars/server1.yml`
+
+```yaml
+ansible_user: admin
+server_role: frontend
+```
+
+### Usage in `playbook.yml`
+
+```yaml
+---
+- name: Deploy web application
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Show server role
+      debug:
+        msg: "Server role is {{ server_role }}"
+```
+
+Ansible automatically loads the relevant variables from `group_vars/` and `host_vars/` based on the inventory.
 
 ### Inventory Plugins
 
