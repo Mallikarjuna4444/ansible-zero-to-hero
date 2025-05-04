@@ -65,6 +65,24 @@ Here’s a quick overview of what you can find in `ansible_facts` and how you mi
    - name: Gather facts
      setup:
    ```
+Here's a simple example of an Ansible playbook that **disables fact gathering** using `gather_facts: no`:
+
+```yaml
+---
+- name: Example Playbook Without Fact Gathering
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "This playbook does not gather facts automatically."
+```
+
+### Key Points:
+
+* `gather_facts: no` prevents Ansible from collecting system information (like IP address, OS, memory, etc.) at the start of the play.
+* This can speed up execution when you don't need those details or are running a quick or simple task.
 
 ### Customizing Facts Collection
 
