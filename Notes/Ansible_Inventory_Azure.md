@@ -30,7 +30,7 @@ Certainly! Authentication is a key part of using Ansible with **Azure**. You hav
 
 ---
 
-## ✅ 1. **Using Azure CLI (Recommended for Local Dev)**
+## ✅**Using Azure CLI (Recommended for Local Dev)**
 
 If you've logged in via Azure CLI:
 
@@ -54,7 +54,7 @@ Ansible will automatically pick up the Azure CLI login context.
 
 ---
 
-## ✅ 2. **Using Environment Variables (for CI/CD or Automation)**
+## ✅**Using Environment Variables (for CI/CD or Automation)**
 
 You can set environment variables to authenticate as a **Service Principal**:
 
@@ -79,7 +79,7 @@ auth_source: env
 
 ---
 
-## ✅ 3. **Using a Credentials File**
+## ✅**Using a Credentials File**
 
 You can also use a credentials profile file (like AWS). Format:
 
@@ -110,7 +110,7 @@ profile: default
 
 ---
 
-## ✅ 4. **Using a Managed Identity (for VMs or Services in Azure)**
+## ✅**Using a Managed Identity (for VMs or Services in Azure)**
 
 If your playbook runs **from inside an Azure VM with a managed identity**, set:
 
