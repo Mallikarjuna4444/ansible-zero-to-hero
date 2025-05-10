@@ -1,3 +1,7 @@
+**Best Website to learn Linux:**
+
+## https://linuxjourney.com/
+
 ### Shell Scripting
 
 https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/
