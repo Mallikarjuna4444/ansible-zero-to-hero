@@ -64,6 +64,84 @@ Alternatively, use a password file:
 ansible-playbook playbook.yml --vault-password-file /path/to/vault_password_file
 ```
 
+Yes! Besides `--ask-vault-pass` or `--vault-password-file`, there are a few other ways to pass your `secrets.yml` (or any **vault-encrypted** file) into your Ansible playbooks. Here's a full overview:
+
+---
+
+## ✅ 1. **Use `vars_files` in the playbook (recommended)**
+
+This is the most common approach, as shown earlier:
+
+```yaml
+vars_files:
+  - secrets.yml
+```
+
+### 🔐 Run with:
+
+```bash
+ansible-playbook playbook.yml --ask-vault-pass
+# or
+ansible-playbook playbook.yml --vault-password-file ~/.vault_pass.txt
+```
+
+---
+
+## ✅ 2. **Use `include_vars` task**
+
+You can dynamically include an encrypted variable file as a task:
+
+```yaml
+tasks:
+  - name: Include secrets
+    include_vars:
+      file: secrets.yml
+```
+
+This gives you more control (e.g., conditionally loading secrets per host or environment).
+
+---
+
+## ✅ 3. **Use Vault-encrypted group\_vars or host\_vars**
+
+You can encrypt files inside `group_vars/` or `host_vars/`, and Ansible will **automatically decrypt** them at runtime.
+
+Example structure:
+
+```
+group_vars/
+  all/
+    secrets.yml   <-- vault-encrypted
+```
+
+And you can just use the variables normally in your playbook:
+
+```yaml
+tasks:
+  - name: Use secret from group_vars
+    debug:
+      msg: "API key: {{ api_key }}"
+```
+
+You don’t even need to reference `vars_files` here — Ansible loads them automatically.
+
+---
+
+## ✅ 4. **Pass variables via `-e` (encrypted vars file)**
+
+You can use `-e` to load vault-encrypted variables:
+
+```bash
+ansible-playbook playbook.yml -e "@secrets.yml" --ask-vault-pass
+```
+
+Or with a vault password file:
+
+```bash
+ansible-playbook playbook.yml -e "@secrets.yml" --vault-password-file ~/.vault_pass.txt
+```
+
+
 ### 2. Environment Variables
 
 Environment variables can be used to manage secrets securely by setting them in your environment and accessing them within your playbooks.
